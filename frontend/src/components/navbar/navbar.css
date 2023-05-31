@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(0deg, #00081D 0%, #00123e 70%);
+}
+.name-title{
+    color: rgb(91, 184, 242);
+    font-size: 3em;
+    margin-left: .5em;
+
+    
+}
+.nav-tabs{
+    text-decoration: none;
+    color: rgb(164, 209, 251);
+    margin: 1.5em auto;
+}

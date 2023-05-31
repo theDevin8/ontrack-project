@@ -1,0 +1,55 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+}
+.about-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.description{
+    width: 40%;
+    margin: 3em 0 0 4em;
+    font-size: 1.5em;
+    text-align: center;
+}
+.about-gif{
+    height: 15em;
+    width: 20em;
+    border-radius: 2em;
+    margin-right: 9em;
+    margin-top: 3em;
+}
+.about-gif2{
+    height: 15em;
+    width: 20em;
+    border-radius: 2em;
+    margin-top: 5em;
+    margin-left: 6em;
+}
+.description2{
+    width:40%;
+    font-size: 1.5em;
+    margin-right: 4em;
+    margin-top: 4em;
+    text-align: center;
+}
+.title{
+    margin: 0 auto;
+    font-size: 3em;
+}
+.description3{
+    font-size: 2em;
+    margin: 0 auto;
+}
+.about-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ul{
+    margin-top: 0;
+}

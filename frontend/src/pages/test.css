@@ -1,0 +1,31 @@
+.dashboard{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 100px;
+}
+.habitcard-details{
+    background-color: #00123e;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    width: 40em;
+}
+.habitcard-details h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: aliceblue;
+}
+.habitcard-details p {
+    margin: 0;
+    font-size: 0.9em;
+}
+.habitcard-details span{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+}

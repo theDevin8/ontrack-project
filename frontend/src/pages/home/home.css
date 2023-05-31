@@ -1,0 +1,82 @@
+.welcome-message{
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0;
+}
+.title-name{
+    color: rgba(0, 163, 255, 1);
+}
+
+.adver-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.adver-card{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #082775, #314579);
+    height: 25em;
+    width: 20em;
+    margin: 4em;
+    border-radius: 3em;
+    transition: all 0.5s ease-in-out;
+}
+.adver-card:hover{
+    transform: scale(1.05);
+}
+.adver-img{
+    height: 13em;
+    width: 13em;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+.adver-description{
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.description-summary{
+    font-size: 2em;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+.join-ontrack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+}
+.register-button{
+    display: inline-block;
+    border: 2px solid #082775; 
+    color: #ffffff; 
+    text-decoration: none;
+    background-color: transparent;
+    padding: 20px 20px;
+    transition: background-color 0.3s;
+    margin-left: 0 auto;
+    height: 1em;
+    width: 8em;
+    text-align: center;
+    font-size: 1.5em;
+}
+.register-button:hover{
+    background-color: #314579;
+    cursor: pointer;
+}
+.signIn{
+    margin-top: 1em;
+    margin-bottom: 3em;
+    font-size: 1.5em;
+    text-decoration: underline;
+    cursor: pointer;
+    color:white;
+}

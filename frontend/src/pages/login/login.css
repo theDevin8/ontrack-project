@@ -1,0 +1,64 @@
+.canvas{
+    background-color: rgb(229, 234, 249);
+    width: 50em;
+    height: 40em;
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 0 0.1em .5em #9c9c9c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-top: 8em;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-title{
+    color: black;
+    font-size: 3em;
+    margin: 0;
+}
+.login-b{
+    display: inline-block;
+    border: 2px solid #082775; 
+    color: #000000; 
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 10px;
+    transition: background-color 0.3s;
+    margin-left: 0 auto;
+    width: 8em;
+    margin-top: .2em;
+    text-align: center;
+    font-size: 1em;
+}
+.user-inputs{
+    display: flex;
+    flex-direction: column;   
+}
+.input-title{
+    color: black;
+    text-align: center;
+}
+.input{
+    border-radius: 3em;
+    border: none;
+    background-color: #cfcfcf;
+    height: 3em;
+    width: 20em;
+    padding-left: 1em;   
+}
+.login-b:hover{
+    background-color: #314579;
+    cursor: pointer;
+    color: white;
+}
+.register-here{
+    color: #000000;
+    text-decoration: underline;
+    cursor: pointer;
+}
