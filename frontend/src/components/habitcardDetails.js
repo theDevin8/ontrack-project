@@ -1,5 +1,7 @@
 import { useHabitCardContext } from '../hooks/useHabitcardsContext';
 
+import formatDistanceToNow  from 'date-fns/formatDistanceToNow'
+
 const HabitCardDetails = ({ habitcard }) => {
     const { dispatch } = useHabitCardContext()
     const handleClick = async () => {
@@ -11,13 +13,18 @@ const HabitCardDetails = ({ habitcard }) => {
             dispatch({type: 'DELETE_HABITCARD', payload: json})
         }
     }
+    const formatDate = (date) => {
+        const options = { month: '2-digit', day: '2-digit', year: 'numeric' };
+        return new Date(date).toLocaleDateString(undefined, options);
+    };
+
     return(
         <div className="habitcard-details">
             <h4>{habitcard.title}</h4>
             <p>Description: {habitcard.description}</p>
-            <p><strong>Start Date: </strong>{habitcard.startDate}</p>
-            <p><strong>End Date: </strong>{habitcard.endDate}</p>
-            <p>{habitcard.createdAt}</p>
+            <p><strong>Start Date: </strong>{formatDate(habitcard.startDate)}</p>
+            <p><strong>End Date: </strong>{formatDate(habitcard.endDate)}</p>
+            <p>{formatDistanceToNow(new Date(habitcard.createdAt), { addSuffix: true})}</p>
             <span onClick={handleClick}>delete</span>
         </div>
     )

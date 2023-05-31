@@ -21,7 +21,7 @@ const Test = () => {
             }
         }
         fetchHabitCards()
-    }, [])
+    }, [dispatch])
 
     return(
         <div>
