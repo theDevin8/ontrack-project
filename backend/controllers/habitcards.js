@@ -28,6 +28,19 @@ const getHabitCard = async (req, res) => {
 const createHabitcard = async(req, res) => {
     const {title, description, startDate, endDate} = req.body
 
+    let emptyFields = []
+    if(!title){
+        emptyFields.push('title')
+    }
+    if(!startDate){
+        emptyFields.push('Start Date')
+    }
+    if(!endDate){
+        emptyFields.push('End Date')
+    }
+    if(emptyFields.length > 0){
+        return res.status(400).json({error: 'Please fill in all the fields', emptyFields})
+    }
     //add doc to db
     try {
         const habitcard = await habitCard.create({title, description, startDate, endDate})
@@ -35,7 +48,6 @@ const createHabitcard = async(req, res) => {
     } catch (error) {
         res.status(400).json({error: error.message})
     }
-    res.json({mssg: 'Post a new habit card'})
 }
 
 //delete a habitcard

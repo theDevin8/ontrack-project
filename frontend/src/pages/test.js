@@ -1,4 +1,5 @@
-import {useEffect, useState} from 'react'
+import { useEffect } from 'react'
+import { useHabitCardContext } from '../hooks/useHabitcardsContext'
 //dashboard testing
 
 // compnents
@@ -7,7 +8,8 @@ import HabitCardForm from '../components/habitCardForm'
 import './test.css'
 
 const Test = () => {
-    const [habitcards, sethabitcards] = useState(null)
+    const { habitcards, dispatch} = useHabitCardContext() 
+    
 
     useEffect(() => {
         const fetchHabitCards = async () => {
@@ -15,7 +17,7 @@ const Test = () => {
             const json = await response.json()
 
             if (response.ok){
-                sethabitcards(json)
+               dispatch({type: 'SET_HABITCARDS', payload: json})
             }
         }
         fetchHabitCards()
@@ -23,12 +25,16 @@ const Test = () => {
 
     return(
         <div>
+            <h1 className='welcome-message'>Dashboard</h1>
+            <input type='text' className='input-search' placeholder='Search Habit Card' />
             <div className='dashboard'>
-                {habitcards && habitcards.map((habitcard) => (
-                    <HabitCardDetails key={habitcard._id} habitcard={habitcard} />
-                ))}
+                <div>
+                    {habitcards && habitcards.map((habitcard) => (
+                        <HabitCardDetails key={habitcard._id} habitcard={habitcard} />
+                    ))}
+                </div>
+                <HabitCardForm />
             </div>
-            <HabitCardForm />
         </div>
     )
 }

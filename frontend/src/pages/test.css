@@ -1,31 +1,94 @@
 .dashboard{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
 }
-.habitcard-details{
+.input-search{
+    display: flex;
+    border-radius: 3em;
+    border: none;
+    background-color: #eeeded;
+    height: 3em;
+    width: 25em;
+    padding-left: 1em;   
+    margin: 0 auto;
+    margin-top: 2em;
+}
+/* habit cards style */
+.habitcard-details {
     background-color: #00123e;
     border-radius: 4px;
     margin: 20px auto;
     padding: 20px;
     position: relative;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-    width: 40em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s ease-in-out;
+}
+.habitcard-details:hover{
+    transform: scale(1.05);
 }
 .habitcard-details h4 {
     margin: 0 0 10px 0;
     font-size: 1.2em;
     color: aliceblue;
 }
+
 .habitcard-details p {
     margin: 0;
     font-size: 0.9em;
 }
-.habitcard-details span{
+
+.habitcard-details span {
     position: absolute;
-    top:20px;
+    top: 20px;
     right: 20px;
     cursor: pointer;
     padding: 6px;
     border-radius: 50%;
+}
+
+/* form style */
+.createHabitCard{
+    background-color: rgb(229, 234, 249);
+    width: 20em;
+    height: 33em;
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 0 0.1em .5em #9c9c9c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-left: 10em;
+    color: black;
+}
+
+.insert-card {
+    display: inline-block;
+    border: 2px solid #082775; 
+    color: #000000; 
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 10px;
+    transition: background-color 0.3s;
+    margin-left: 0 auto;
+    width: 9em;
+    margin-top: .2em;
+    text-align: center;
+    font-size: 1em;
+}
+.insert-card:hover{
+    background-color: #314579;
+    cursor: pointer;
+    color: white;
+}
+
+.error {
+    padding: 10px;
+    background: #ffefef;
+    border: 1px solid var(--error);
+    color: var(--error);
+    border-radius: 4px;
+    margin: 20px 0;
 }
